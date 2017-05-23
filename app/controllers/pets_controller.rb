@@ -2,6 +2,7 @@ class PetsController < ApplicationController
 
   def index
     # TODO: set up data for index view
+    end
   end
 
   def show
