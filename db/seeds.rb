@@ -30,7 +30,7 @@ def random_date(min_days_from_now, max_days_from_now)
   (DateTime.now + rng.rand(min_days_from_now..max_days_from_now)).to_date
 end
 
-Pets
+# Pets
 def random_pet_breed
   ["dog", "cat", "reptile", "rabbit", "rodent", "rock", "amphibian", "giant robot", "fish"].sample
 end
