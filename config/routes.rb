@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   root "site#index"
 
-  resources :owners
-  resources :pets, only: [:index, :new, :create]
+  resources :owners do
+  resources :pets
+  end
 end
