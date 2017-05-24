@@ -1,13 +1,14 @@
 class Pet < ActiveRecord::Base
   # TODO: associate with owner
   belongs_to :owner
+  has_many :appointments
 
 
   # TODO: associate with appointments
 
   # TODO: validate name and breed
   validates :name, presence: true, length: {maximum: 255}
-  validates :breed, presence: true 
+  validates :breed, presence: true
 
   # adds an error if birth date is in the future
   def date_of_birth_cannot_be_in_the_future

@@ -1,0 +1,11 @@
+<%= form_for @appointment do |f| %>
+  <div class="form-group">
+    <%= f.text_field :veterinarian, class: "form-control", placeholder: "Veterinarian", autofocus: true %>
+  </div>
+  <div class="form-group">
+    <%= f.text_field :time, class: "form-control", placeholder: "Time" %>
+  </div>
+  <div class="form-group">
+    <%= f.datetime_select :start_datetime, :ampm => true, :minute_step => 15 %>
+  </div>
+<% end %>

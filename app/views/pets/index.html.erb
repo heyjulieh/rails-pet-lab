@@ -2,7 +2,7 @@
 <hr>
 <% @owner.pets.each do |pet| %>
   <p>
-    <strong><%= link_to pet.name, owner_pet_path(@owner, pet) %></strong>
+    <strong><%= link_to pet.name, owner_pets_path(@owner, pet) %></strong>
     (<%= pet.breed %>)
   </p>
 <% end %>

@@ -4,6 +4,7 @@
 # Destroy everything to rebuild
 Pet.destroy_all
 Owner.destroy_all
+Appointment.destroy_all
 
 # Owners
 owners_data = []
@@ -45,3 +46,16 @@ pets_data = []
   }
 end
 pets = Pet.create(pets_data)
+
+# Appointments
+
+appointments_data = []
+6.times do
+  appointments_data << {
+    # veterinarian: FFaker::Name.first_name,
+    time: FFaker::Time.datetime,
+    # reason: FFaker::Lorem.sentence,
+    pet: pets.sample
+  }
+end
+appointments = Appointment.create(appointments_data)

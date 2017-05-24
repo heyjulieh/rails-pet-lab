@@ -2,4 +2,11 @@
 <hr>
 <p><strong>Name:</strong> <%= @pet.name %></p>
 <p><strong>Breed:</strong> <%= @pet.breed %></p>
+<p><strong>Veterinarian:</strong> <%= @pet.appointment.veterinarian %></p>
+<p><strong>Appointment Time:</strong> <%= @pet.appointment.time %></p>
+<p><strong>Appointment Reason:</strong> <%= @pet.appointment.reason %></p>
+<p><%= link_to "edit pet", edit_owner_pet_path(@owner, @pet) %></p>
+<p><%= link_to "delete pet", owner_pet_path(@owner, @pet), method: :delete %></p>
+<hr>
 <p><%= link_to "view all pets for owner #{@owner.email}", owner_pets_path(@owner) %></p>
+<p><%= link_to "add an appointment for #{@pet.name}", new_pet_appointment_path(@pet) %></p>
